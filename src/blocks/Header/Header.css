@@ -1,0 +1,15 @@
+.header{
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header__img-logo{
+    width: 73px;
+    height: 73px;
+    margin-top: 70px;
+}

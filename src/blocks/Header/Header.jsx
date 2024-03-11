@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import burgerIcon from '../../img/menu-bar.png';
+import magnumLogo from '../../img/M-letter.svg'
+import './Header.css'
 
 const styles = {
   bmBurgerButton: {
@@ -8,7 +10,7 @@ const styles = {
     width: '36px',
     height: '30px',
     right: '36px',
-    top: '36px',
+    top: '80px',
     backgroundImage: `url(${burgerIcon})`,
     backgroundPosition: 'center', // Center the background image
     backgroundSize: 'cover', // Cover the entire area of the button
@@ -17,13 +19,15 @@ const styles = {
   bmCrossButton: {
     height: '24px',
     width: '24px',
+    top: '80px',
+    right: '36px'
   },
   bmCross: {
     background: '#bdc3c7'
   },
   bmMenuWrap: {
     position: 'fixed',
-    height: '100%'
+    height: '100%',
   },
   bmMenu: {
     background: '#8566FF',
@@ -35,13 +39,19 @@ const styles = {
   },
   bmItemList: {
     color: '#b8b7ad',
-    padding: '0.8em'
+    padding: '0.8em',
+    height: '90%',
+    display: 'flex',
+    marginTop: '50px',
+    flexDirection: 'column',
   },
   bmItem: {
-    display: 'inline-block'
+    display: 'inline-block',
+    textDecoration: 'none',
+    color: 'white'
   },
   bmOverlay: {
-    background: 'rgba(0, 0, 0, 0.3)'
+    background: 'rgba(0, 0, 0, 0.5)'
   }
 };
 
@@ -51,38 +61,20 @@ const Header = () => {
     const handleStateChange = (state) => {
       setMenuOpen(state.isOpen);
     };
-
-    useEffect(() => {
-        // When the menu is open, prevent scrolling
-        if (menuOpen) {
-            document.body.style.overflow = 'hidden';
-        } else {
-          document.body.style.overflow = 'auto';
-        }
-    
-        // Clean up the style
-        return () => {
-          document.body.style.overflow = 'auto';
-        };
-      }, [menuOpen]); // Only re-run the effect if menuOpen changes
   
     return (
-      <header>
+      <header className='header'>
         <Menu
-        styles={styles} 
-          right // Добавлено свойство для открытия с правой стороны
+          styles={styles} 
+          right
           isOpen={menuOpen}
           onStateChange={handleStateChange}
         >
-          <a id="home" className="menu-item" href="/">На главную</a>
-          <a id="meetup" className="menu-item" href="/meetup">Meetup Week:</a>
-          <a id="wait" className="menu-item" href="/wait">Что вас ждет</a>
-          <a id="access" className="menu-item" href="/access">Как попасть</a>
-          <a id="schedule" className="menu-item" href="/schedule">Расписание</a>
-          {/* Добавьте дополнительные пункты меню */}
+          <a id="home" className="menu-item" href="/">Услуги</a>
+          <a id="meetup" className="menu-item" href="/meetup">Портфолио</a>
         </Menu>
-        {/* Остальная часть заголовка */}
-        <div>Young && Yandex</div>
+        {/* <div className='header__title'>MAGNUM</div> */}
+        <img className='header__img-logo' src={magnumLogo} alt='magnum digital studio'/>
       </header>
     );
   };
