@@ -1,126 +1,127 @@
 
 .main{
     margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    align-items: center;
-    justify-content: center;
-    max-width: 500px;
+    max-width: 1280px;
     width: 100%;
-    margin: 0 auto;
+    margin: 100px auto 0;
+    /* background-color: azure; */
+}
+
+.main__container{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 250px;
+    width: 100%;
 }
 
 .main__title-img{
-    width: 185px;
-    height: 36px;
+    width: 321px;
+    height: 61px;
     /* margin: 0 auto; */
 }
 
 .main__subtitle{
     color: #ffffff;
-    font-size: 12px;
-    max-width: 80%;
+    font-size: 25px;
+    max-width: 624px;
     margin: 30px auto 30px;
     font-weight: 400;
 }
 
 .main__grid{
+    margin: 0 auto;
+    /* background-color: aquamarine; */
     display: grid;
-    width: 100%;
-    max-width: 420px;
-    grid-template-columns: repeat(4, minmax(50px, 90px)); /* adjust the number of columns as needed */
-    grid-template-rows: repeat(5, 110px); /* auto row height based on content */
-    gap: 0px; /* space between items */
-    margin-bottom: 50px;
+    grid-template-columns: repeat(8, minmax(61px, 122px));
+    grid-template-rows: repeat(9, 45px);
+    gap: 10px;
 }
 
-.main__grid-item {
-    position: relative; /* if you need to position items within the grid item */
+
+
+.main__grid-item{
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 30px;
 }
 
-.main__grid-item1 {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    width: 100%;
-    
-}
-.main__grid-item2 {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    width: 100%;
+.main__grid-item1{
+    grid-column: 1/5;
+    grid-row: 2/6;
+    background-image: url(../../img/portfolio-bloggers.gif);
+    border: 2px solid #ffffff;
+    background-size: 400px;
+    background-position: top 60% left 50%;
 }
 
-.main__grid-item3 {
-    grid-column-start: 2;
-    grid-column-end: 5;
-    width: 100%;
+.main__grid-item2{
+    grid-column: 6/9;
+    grid-row: 1/5;
+    background-image: url(../../img/alfa.png);
+    border: 2px solid #ffffff;
+    background-size: 400px;
+    background-position: top 60% left 50%;
 }
 
-.main__circle{
-    /* margin-top: 50px; */
-    animation: spin 20s linear infinite;
+.main__grid-item3{
+    grid-column: 2/4;
+    grid-row: 6/10;
+    background-image: url(../../img/store.png);
 }
 
-@keyframes spin {
-    from {
-      transform: rotate(0deg);
+.main__grid-item4{
+    grid-column: 5/8;
+    grid-row: 3/10;
+    background-image: url(../../img/urban-forum.png);
+    background-size: 400px;
+    background-position: top 60% left 50%;
+}
+
+@media screen and (max-width: 767px) {
+    .main__grid{
+        grid-template-columns: repeat(8, minmax(20px, 37px));
+        grid-template-rows: repeat(9, 42px);
     }
-    to {
-      transform: rotate(360deg);
+    .main__title-img{
+        width: 185px;
+        height: 36px;
+    }
+
+    .main__subtitle{
+        font-size: 15px;
+        max-width: 344px;
+    }
+
+    .main__grid-item1{
+        grid-column: 1/9;
+        grid-row: 1/5;
+        border: none;
+    }
+
+    .main__grid-item2{
+        grid-column: 5/9;
+        grid-row: 5/7;
+    }
+
+    .main__grid-item3{
+        display: none;
+    }
+
+    .main__grid-item4{
+        grid-column: 4/9;
+        grid-row: 7/11;
+    }
+
+    .main__grid-item{
+        border-radius: 10px;
+    }
+    .main__container{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .main{
+        margin-top: 50px;
     }
   }
-
-.main__weDo{
-    font-size: 25px;
-    color: #ffffff;
-    margin-top: 50px;
-}
-
-.main__services{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100%;
-    justify-content: center;
-}
-
-.main__section{
-    object-fit: cover;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 25vh;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 500px;
-    display: flex;
-}
-
-.section1{
-    background-image: url(../../img/add-section.png);
-}
-
-.section2{
-    background-image: url(../../img/section2.png);
-}
-
-.section3{
-    background-image: url(../../img/section3.png);
-    /* background-size: 80% 100%; */
-
-    background-position: center;
-}
-
-.section4{
-    background-image: url(../../img/render7.png);
-}
-
-.main__section-title{
-    font-size: 25px;
-    color: #ffffff;
-    margin: auto;
-}

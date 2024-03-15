@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import burgerIcon from '../../img/menu-bar.png';
-import magnumLogo from '../../img/M-letter.svg'
+import magnumLogo from '../../img/M-letter.png'
 import './Header.css'
 
 const styles = {
@@ -9,7 +9,7 @@ const styles = {
     position: 'absolute',
     width: '36px',
     height: '30px',
-    right: '36px',
+    right: '20px',
     top: '80px',
     backgroundImage: `url(${burgerIcon})`,
     backgroundPosition: 'center', // Center the background image
@@ -57,24 +57,47 @@ const styles = {
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [isMobileView, setIsMobileView] = useState(window.innerWidth < 768);
   
     const handleStateChange = (state) => {
       setMenuOpen(state.isOpen);
     };
+
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobileView(window.innerWidth < 500);
+      };
+  
+      // Listen for resize events
+      window.addEventListener('resize', handleResize);
+  
+      // Clean up the event listener when the component unmounts
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
   
     return (
       <header className='header'>
-        <Menu
-          styles={styles} 
-          right
-          isOpen={menuOpen}
-          onStateChange={handleStateChange}
-        >
-          <a id="home" className="menu-item" href="/">Услуги</a>
-          <a id="meetup" className="menu-item" href="/meetup">Портфолио</a>
-        </Menu>
-        {/* <div className='header__title'>MAGNUM</div> */}
-        <img className='header__img-logo' src={magnumLogo} alt='magnum digital studio'/>
+        <div className='header__container'>
+        {isMobileView && 
+          <Menu className='menu'
+            styles={styles} 
+            right
+            isOpen={menuOpen}
+            onStateChange={handleStateChange}
+          >
+            <a id="home" className="menu-item" href="/">Услуги</a>
+            <a id="meetup" className="menu-item" href="/meetup">Портфолио</a>
+          </Menu>}
+          
+          {/* <div className='header__title'>MAGNUM</div> */}
+          <img className='header__img-logo' src={magnumLogo} alt='magnum digital studio'/>
+          {!isMobileView && (
+          <ul className='header__list'>
+            <li>ПОРТФОЛИО</li>
+            <li>УСЛУГИ</li>
+          </ul>
+        )}
+        </div>
       </header>
     );
   };
