@@ -1,20 +1,17 @@
 import './Services.css'
-import bloggersGirl from '../../img/portfolio-bloggers.gif'
-import alphaImage from '../../img/alfa.png'
-import urbanImage from '../../img/urban-forum.png'
-import circle from '../../img/circle.svg'
-// import star from '../../img/star.svg'
-// import add from '../../img/add-section.png'
+import circle from '../../img/circle.png'
 
 
 function Services() {
     return (
       <div className="services">
+        <img className='services__circle-decor' alt='circle' src={circle}/>
+        <h1 className='services__title'>МЫ СОЗДАЕМ</h1>
         <div className='services__container'>
-            <div className='services__item services__item1'></div>
-            <div className='services__item services__item2'></div>
-            <div className='services__item services__item3'></div>
-            <div className='services__item services__item4'></div>
+            <div className='services__item services__item1'><p className='services__item-title'>РЕКЛАМА</p></div>
+            <div className='services__item services__item2'><p className='services__item-title'>MOTION</p></div>
+            <div className='services__item services__item3'><p className='services__item-title'>AVATAR</p></div>
+            <div className='services__item services__item4'><p className='services__item-title'>METAVERSE</p></div>
         </div>
       </div>
     );

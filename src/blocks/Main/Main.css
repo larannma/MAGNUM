@@ -51,6 +51,7 @@
     grid-row: 2/6;
     background-image: url(../../img/portfolio-bloggers.gif);
     border: 2px solid #ffffff;
+    background-color: black;
     background-size: 400px;
     background-position: top 60% left 50%;
 }
@@ -74,9 +75,10 @@
     grid-column: 5/8;
     grid-row: 3/10;
     background-image: url(../../img/urban-forum.png);
-    background-size: 400px;
+    background-size: 450px;
     background-position: top 60% left 50%;
 }
+
 
 @media screen and (max-width: 767px) {
     .main__grid{
