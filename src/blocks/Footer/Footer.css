@@ -4,6 +4,10 @@
   padding-right: 20px;
   position: relative;
   overflow: hidden;
+  background-image: url(../../img/background.png);
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: 2000px;
 }
 
 .footer__container{

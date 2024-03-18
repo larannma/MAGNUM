@@ -44,6 +44,7 @@ const styles = {
     display: 'flex',
     marginTop: '50px',
     flexDirection: 'column',
+    gap: '30px',
   },
   bmItem: {
     display: 'inline-block',
@@ -86,15 +87,15 @@ const Header = () => {
             onStateChange={handleStateChange}
           >
             <a id="home" className="menu-item" href="/">Услуги</a>
-            <a id="meetup" className="menu-item" href="/meetup">Портфолио</a>
+            <a id="meetup" className="menu-item" href="/portfolio">Портфолио</a>
           </Menu>}
           
           {/* <div className='header__title'>MAGNUM</div> */}
           <img className='header__img-logo' src={magnumLogo} alt='magnum digital studio'/>
           {!isMobileView && (
           <ul className='header__list'>
-            <li>ПОРТФОЛИО</li>
-            <li>УСЛУГИ</li>
+            <li><a className='header__link' href='/portfolio'>ПОРТФОЛИО</a></li>
+            <li><a className='header__link' href='/'>УСЛУГИ</a></li>
           </ul>
         )}
         </div>

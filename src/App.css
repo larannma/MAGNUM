@@ -2,7 +2,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  background-image: url(./img/loop-ezgif.com-optimize.gif);
+  background-image: url(./img/background.png);
   object-fit: cover;
   background-repeat: no-repeat;
   background-size: 1280px;
@@ -30,3 +30,8 @@
   color: white;
 }
 
+@media screen and (max-width: 767px) {
+  .App {
+    background-size: 580px;
+  }
+}

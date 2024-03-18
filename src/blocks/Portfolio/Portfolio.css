@@ -12,6 +12,8 @@
 }
 
 .container {
+  padding-left: 20px;
+  padding-right: 20px;
   margin-top: 10px;
   height: 100%;
   display: grid;
@@ -37,6 +39,7 @@
   background-position: center;
   background-repeat: no-repeat;
   transition: transform 0.4s;
+  background-size: 800px;
 }
 
 .area:hover {
@@ -45,23 +48,42 @@
 
 .area1 {
   grid-area: area1;
-  background-image: url(../../img/portfolio/portfolio1.png);
+  background-image: url(../../img/portfolio/Муз-ТВ\ Новый\ MuzON\ 2023-min.jpg);
 }
 
 .area2 {
   grid-area: area2;
-  background-image: url(../../img/portfolio/portfolio2.png);
+  background-image: url(../../img/portfolio/Томск_карта-min.png);
 }
 
-.area3 { grid-area: area3; background-image: url(../../img/portfolio/portfolio3.png);}
+.area3 {
+  grid-area: area3;
+  background-image: url(../../img/portfolio/Альфабанк\ 2022-min.png);
+  background-size: 1200px;
+}
 
-.area7 { grid-area: area7; background-image: url(../../img/portfolio/portfolio4.png);}
+.area7 {
+  grid-area: area7;
+  background-image: url(../../img/portfolio/Doppel\ Hertz-min.png);
+  background-size: 1200px;
+}
 
-.area6 { grid-area: area6; background-image: url(../../img/portfolio/portfolio5.png);}
+.area6 {
+  grid-area: area6;
+  background-image: url(../../img/portfolio/Московский\ URBAN\ FORUM\ \ 2023-min.png);
+}
 
-.area5 { grid-area: area5; background-image: url(../../img/portfolio/portfolio2.png);}
+.area5 {
+  grid-area: area5;
+  background-image: url(../../img/portfolio/Муз\ тв\ Золотые\ Хиты\ 2022-min.png);
+  background-size: 700px;
+}
 
-.area4 { grid-area: area4; background-image: url(../../img/portfolio/portfolio4.png);}
+.area4 {
+  grid-area: area4;
+  background-image: url(../../img/portfolio/Сберталанты\ 2022-min.jpg);
+  background-size: 1000px;
+}
 
 .overlay {
   border-radius: 30px;
@@ -83,4 +105,22 @@
 .portfolio__item:hover .overlay {
   opacity: 1;
   display: flex; /* Change display property to flex to make it visible */
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    display: flex; /* Use flexbox instead of grid */
+    flex-direction: column; /* Stack child elements in a column */
+    margin-top: 10px;
+    height: 100%;
+    gap: 20px; /* Maintain the gap between elements */
+  }
+  
+  /* You can assign classes or ids to your individual areas if they need specific styling */
+  .area1, .area2, .area3, .area4, .area5, .area6, .area7 {
+    width: 100%; /* Each area takes the full width */
+    /* Add additional styling as needed */
+    height: 300px;
+    border-radius: 5px;
+  }
 }

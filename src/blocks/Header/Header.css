@@ -29,3 +29,8 @@
     transform: translate(-50%, 0);
 }
 
+.header__link{
+    text-decoration: none;
+    color: #ffffff;
+}
+

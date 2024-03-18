@@ -5,6 +5,10 @@
   display: flex;
   position: relative;
   margin: 100px auto 0;
+  background-image: url(../../img/background.png);
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: 1280px;
 }
 
 .contact-form__container{
