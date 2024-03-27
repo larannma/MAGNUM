@@ -6,7 +6,7 @@
 }
 
 .portfolio__item {
-  background-color: azure;
+  background-color: rgb(0, 0, 0);
   border-radius: 30px;
   position: relative;
 }
@@ -40,49 +40,50 @@
   background-repeat: no-repeat;
   transition: transform 0.4s;
   background-size: 800px;
+  border-radius: 30px;
 }
 
-.area:hover {
+/* .area:hover {
   transform: scale(1.02);
-}
+} */
 
 .area1 {
   grid-area: area1;
-  background-image: url(../../img/portfolio/Муз-ТВ\ Новый\ MuzON\ 2023-min.jpg);
+  /* background-image: url(../../img/portfolio/Муз-ТВ\ Новый\ MuzON\ 2023-min.jpg); */
 }
 
 .area2 {
   grid-area: area2;
-  background-image: url(../../img/portfolio/Томск_карта-min.png);
+  /* background-image: url(../../img/portfolio/Томск_карта-min.png); */
 }
 
 .area3 {
   grid-area: area3;
-  background-image: url(../../img/portfolio/Альфабанк\ 2022-min.png);
-  background-size: 1200px;
+  /* background-image: url(../../img/portfolio/Альфабанк\ 2022-min.png); */
+  /* background-size: 1200px; */
 }
 
 .area7 {
   grid-area: area7;
-  background-image: url(../../img/portfolio/Doppel\ Hertz-min.png);
-  background-size: 1200px;
+  /* background-image: url(../../img/portfolio/Doppel\ Hertz-min.png); */
+  /* background-size: 1200px; */
 }
 
 .area6 {
   grid-area: area6;
-  background-image: url(../../img/portfolio/Московский\ URBAN\ FORUM\ \ 2023-min.png);
+  /* background-image: url(../../img/portfolio/Московский\ URBAN\ FORUM\ \ 2023-min.png); */
 }
 
 .area5 {
   grid-area: area5;
-  background-image: url(../../img/portfolio/Муз\ тв\ Золотые\ Хиты\ 2022-min.png);
-  background-size: 700px;
+  /* background-image: url(../../img/portfolio/Муз\ тв\ Золотые\ Хиты\ 2022-min.png); */
+  /* background-size: 700px; */
 }
 
 .area4 {
   grid-area: area4;
-  background-image: url(../../img/portfolio/Сберталанты\ 2022-min.jpg);
-  background-size: 1000px;
+  /* background-image: url(../../img/portfolio/Сберталанты\ 2022-min.jpg); */
+  /* background-size: 1000px; */
 }
 
 .overlay {

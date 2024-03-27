@@ -32,8 +32,8 @@
     margin: 0 auto;
     /* background-color: aquamarine; */
     display: grid;
-    grid-template-columns: repeat(8, minmax(61px, 122px));
-    grid-template-rows: repeat(9, 45px);
+    grid-template-columns: repeat(8, minmax(61px, 165px));
+    grid-template-rows: repeat(9, 65px);
     gap: 10px;
 }
 
@@ -52,7 +52,7 @@
     background-image: url(../../img/portfolio-bloggers.gif);
     border: 2px solid #ffffff;
     background-color: black;
-    background-size: 400px;
+    background-size: 650px;
     background-position: top 60% left 50%;
 }
 
@@ -61,7 +61,7 @@
     grid-row: 1/5;
     background-image: url(../../img/alfa.png);
     border: 2px solid #ffffff;
-    background-size: 400px;
+    background-size: 600px;
     background-position: top 60% left 50%;
 }
 
@@ -69,6 +69,7 @@
     grid-column: 2/4;
     grid-row: 6/10;
     background-image: url(../../img/store.png);
+    background-size: 500px;
 }
 
 .main__grid-item4{

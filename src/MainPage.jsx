@@ -4,6 +4,7 @@ import Services from './blocks/Services/Services';
 import ContactForm from './blocks/ContactForm/ContactForm';
 import Footer from './blocks/Footer/Footer';
 import bgImage from './img/background.png'
+import ImageWithVideoOnHover from './blocks/VideoBlock/VideoBlock';
 
 function MainPage() {
   return (
@@ -14,6 +15,7 @@ function MainPage() {
       <Services/>
       <ContactForm/>
       <Footer/>
+      {/* <ImageWithVideoOnHover/> */}
     </div>
   );
 }
